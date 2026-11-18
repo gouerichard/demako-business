@@ -500,3 +500,28 @@
     align-items: flex-start;
   }
 }
+/* LOGO OFFICIEL DEMAKO */
+.brand-logo {
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-name {
+  line-height: 1.2;
+}
+
+@media (max-width: 550px) {
+  .brand-logo {
+    width: 52px;
+    height: 52px;
+  }
+}
