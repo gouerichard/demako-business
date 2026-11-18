@@ -52,3 +52,34 @@ Merci.`
       `mailto:demakobusiness@gmail.com?subject=${subject}&body=${body}`;
   });
 }
+
+/* ANIMATIONS AU DÉFILEMENT */
+const animatedElements = document.querySelectorAll(
+  ".section-head, .service-card, .portfolio-card, .offer-card, .why-card, .why-cta, .contact-card"
+);
+
+animatedElements.forEach(element => {
+  element.classList.add("reveal");
+});
+
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.12
+  });
+
+  animatedElements.forEach(element => {
+    observer.observe(element);
+  });
+} else {
+  animatedElements.forEach(element => {
+    element.classList.add("visible");
+  });
+}
+
