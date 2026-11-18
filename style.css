@@ -318,4 +318,56 @@
     align-items: flex-start;
     flex-direction: column;
   }
+}/* ANIMATIONS DEMAKO BUSINESS */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Effet au survol des cartes */
+.service-card,
+.portfolio-card,
+.offer-card,
+.why-card {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.service-card:hover,
+.portfolio-card:hover,
+.offer-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Effet sur les boutons */
+.button,
+.nav-cta {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.button:hover,
+.nav-cta:hover {
+  transform: translateY(-3px);
+  opacity: 0.9;
+}
+
+/* Respect des préférences de mouvement */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .service-card,
+  .portfolio-card,
+  .offer-card,
+  .why-card,
+  .button,
+  .nav-cta {
+    transition: none;
+    transform: none;
+  }
 }
