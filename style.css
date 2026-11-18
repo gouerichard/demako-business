@@ -371,3 +371,132 @@
     transform: none;
   }
 }
+/* SECTION TEMOIGNAGES DEMAKO */
+
+.testimonials-section {
+  background: #f5f5f5;
+  color: #101010;
+  padding: 100px 0;
+}
+
+.testimonials-section .section-label {
+  color: #b89b00;
+}
+
+.testimonials-section .section-head h2 {
+  color: #101010;
+}
+
+.testimonials-section .section-head h2 em {
+  color: #b89b00;
+  font-style: normal;
+}
+
+.testimonials-section .section-head > p {
+  color: #666666;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 50px;
+}
+
+.testimonial-card {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 15px;
+  padding: 30px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.testimonial-stars {
+  color: #d6ad00;
+  font-size: 20px;
+  letter-spacing: 4px;
+  margin-bottom: 22px;
+}
+
+.testimonial-card > p {
+  color: #555555;
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  border-top: 1px solid #eeeeee;
+  padding-top: 20px;
+}
+
+.testimonial-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #101010;
+  color: #f5d000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.testimonial-author h3 {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.testimonial-author small {
+  color: #888888;
+  font-size: 12px;
+}
+
+.testimonial-bottom {
+  margin-top: 35px;
+  padding: 30px;
+  background: #101010;
+  color: #ffffff;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.testimonial-bottom h3 {
+  font-size: 20px;
+}
+
+.testimonial-bottom .button {
+  text-decoration: none;
+}
+
+@media (max-width: 850px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 550px) {
+  .testimonials-section {
+    padding: 65px 0;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
